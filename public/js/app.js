@@ -27,8 +27,8 @@ window.onload = function() {
 
   var qrcode = new QRCode("qrcode", {
     text: "http://charles.hollenbeck.pw",
-    width: 225,
-    height: 225,
+    width: 200,
+    height: 200,
     colorDark : "#666",
     colorLight : "#DDD",
     correctLevel : QRCode.CorrectLevel.H
