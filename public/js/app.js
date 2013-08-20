@@ -7,7 +7,7 @@ var skills = [
               "Photoshop;#175ba6",
               "Linux;#f7bb00",
               "Computer Repair;#AAA",
-              "Android App Development;#A4C639",
+              "Android Development;#A4C639",
               "Ruby on Rails;#be1d1f",
               "CompTIA A+ Certified;#ef2e25"
               ];
