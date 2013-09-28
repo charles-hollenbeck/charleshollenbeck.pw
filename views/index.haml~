@@ -14,11 +14,11 @@
         %ul
           - menu.each do |btn|
             %li
-              %a(href="#{btn[:link]}")
+              %a(href="#{btn[:link]}" target="_blank")
                 %img(src="images/#{btn[:image]}")         
       #inner
         #avatar
-          %img(src="images/avatar.png")
+          %img(src="images/avatar.png")/
         #container
           %header
             %h1 
