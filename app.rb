@@ -9,7 +9,7 @@ def skills
     {:skill => "CSS", :color => "#7ea838"},
     {:skill => "HTML", :color => "#f16428"},
     {:skill => "Javascript", :color => "#efd84d"},
-    {:skill => "Photoshop", :color => "#efd84d"},
+    {:skill => "Photoshop", :color => "#175ba6"},
     {:skill => "Ruby", :color => "#E0115F"},
     {:skill => "Linux", :color => "#f7bb00"},
     {:skill => "Computer Repair", :color => "#AAA"},
