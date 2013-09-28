@@ -23,7 +23,7 @@ def menu
   [
     {:link => "http://www.linkedin.com/pub/charles-hollenbeck/7a/163/49a", :image => "linkedin_alt.png"},
     {:link => "https://github.com/charles-hollenbeck", :image => "github_alt.png"},
-    {:link => "", :image => "bitbucket.png"},
+    {:link => "https://bitbucket.org/charles-hollenbeck", :image => "bitbucket.png"},
     {:link => "https://play.google.com/store/apps/developer?id=Charles%20Hollenbeck", :image => "play.png"},\
     {:link => "mailto:charles@hollenbeck.pw", :image => "gmail.png"}
   ]
