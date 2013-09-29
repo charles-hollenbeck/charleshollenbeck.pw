@@ -23,7 +23,7 @@
   }
 }
 
-@include selection("#BC66BC", "#222");
+@include selection(#BC66BC, #222);
 
 body {
   font-family: Rosario;
@@ -59,10 +59,6 @@ h1 {
   .subtitle {
     color: #666;
   }
-}
-p {
-  padding: 10px 0 10px 250px;
-  margin: 0;
 }
 nav {
   margin: 0 auto;
