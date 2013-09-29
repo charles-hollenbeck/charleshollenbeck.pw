@@ -8,22 +8,6 @@
   border-bottom-right-radius: $radius;
   border-bottom-left-radius: $radius;
 }
-@mixin selection($bg, $color){
-  ::selection {
-    background:$bg;
-    color:$color;
-  }
-  ::-moz-selection {
-    background:$bg;
-    color:$color;
-  }
-  ::-webkit-selection {
-    background:$bg;
-    color:$color;
-  }
-}
-
-@include selection("#BC66BC", "#222");
 
 body {
   font-family: Rosario;
@@ -35,10 +19,10 @@ ul {
   float: right;
   margin: 0 auto;
   list-style-type:none;
-
+  
   &#skills {
     float: none;
-
+    
     li {
       margin-bottom: 5px;
       float: left;
@@ -55,7 +39,7 @@ h1 {
   padding: 10px;
   margin: 0 auto;
   text-shadow: 0px 0px 2px #888;
-
+  
   .subtitle {
     color: #666;
   }
@@ -66,24 +50,24 @@ p {
 }
 nav {
   margin: 0 auto;
-  padding-bottom: 60px;
-
+  padding-bottom: 60px; 
+   
   ul li {
     float: left;
     margin-left: 15px;
-
+    
     a {
      @include round_edges(5px);
       background-color: #EEE;
       padding: 5px;
       box-shadow: 0 0 3px 3px #CCC;
-      display:block;
-
+      display:block; 
+      
       &:hover {
         background-color: #DDD;
-      }
+      }      
     }
-  }
+  }    
 }
 #wrapper {
   width: 70%;
@@ -105,7 +89,7 @@ nav {
   -moz-box-shadow: inset 0 0 25px #AAA;
   -webkit-box-shadow: inset 0 0 25px #AAA;
   box-shadow: inset 0 0 25px #AAA;
-
+  
   h1 {
     padding-top: 30px;
   }
@@ -139,7 +123,7 @@ nav {
   margin-top: 13px;
   margin-left: -210px;
 }
-#biowrap {
+#biowrap {  
   @include round_edges(25px);
   -moz-box-shadow: 0 0 3px 3px #CCC;
   -webkit-box-shadow: 0 0 3px 3px #CCC;
@@ -148,7 +132,7 @@ nav {
 #skills {
   padding-top: 10px;
 }
-#bio {
+#bio {  
   @include round_edges(25px);
   -moz-box-shadow: inset 0 0 25px #888;
   -webkit-box-shadow: inset 0 0 25px #888;
