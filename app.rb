@@ -10,7 +10,7 @@ def skills
     {:skill => "HTML", :color => "#f16428"},
     {:skill => "Javascript", :color => "#efd84d"},
     {:skill => "Photoshop", :color => "#175ba6"},
-    {:skill => "Ruby", :color => "#E0115F"},
+    {:skill => "Ruby", :color => "#D63333"},
     {:skill => "Linux", :color => "#f7bb00"},
     {:skill => "Computer Repair", :color => "#AAA"},
     {:skill => "Android Development", :color => "#A4C639"},
@@ -19,7 +19,7 @@ def skills
   ]
 end
 
-def menu 
+def menu
   [
     {:link => "http://www.linkedin.com/pub/charles-hollenbeck/7a/163/49a", :image => "linkedin_alt.png"},
     {:link => "https://github.com/charles-hollenbeck", :image => "github_alt.png"},
