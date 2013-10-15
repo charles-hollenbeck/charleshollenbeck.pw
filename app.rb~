@@ -20,7 +20,6 @@ def skills
 end
 
 def menu
-  []
 #  [
 #    {:link => "http://www.linkedin.com/pub/charles-hollenbeck/7a/163/49a", :image => "linkedin_alt.png"},
 #    {:link => "https://github.com/charles-hollenbeck", :image => "github_alt.png"},
