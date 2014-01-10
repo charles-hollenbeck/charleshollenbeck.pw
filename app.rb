@@ -4,18 +4,18 @@ require 'sass'
 
 def skills
   [
+    {:skill => "Ruby", :color => "#D63333"},
+    {:skill => "Ruby on Rails", :color => "#be1d1f"},
     {:skill => "Java", :color => "#b07219"},
     {:skill => "PHP", :color => "#777bb4"},
-    {:skill => "CSS", :color => "#7ea838"},
-    {:skill => "HTML", :color => "#f16428"},
     {:skill => "Javascript", :color => "#efd84d"},
-    {:skill => "Photoshop", :color => "#175ba6"},
-    {:skill => "Ruby", :color => "#D63333"},
+    {:skill => "HTML", :color => "#f16428"},
+    {:skill => "CSS", :color => "#7ea838"},
     {:skill => "Linux", :color => "#f7bb00"},
     {:skill => "Computer Repair", :color => "#AAA"},
     {:skill => "Android Development", :color => "#A4C639"},
-    {:skill => "Ruby on Rails", :color => "#be1d1f"},
-    {:skill => "CompTIA A+ Certified", :color => "#ef2e25"}
+    {:skill => "CompTIA A+ Certified", :color => "#ef2e25"},
+    {:skill => "Photoshop", :color => "#175ba6"}
   ]
 end
 
