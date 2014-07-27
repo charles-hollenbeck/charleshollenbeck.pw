@@ -1,0 +1,245 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,200italic);
+
+$background: #efeae5;
+$header: #323232;
+$white: #F0F0F0;
+$sub: #f1c40f;
+$icons: #2c3e50;
+$link: #27ae60;
+
+@mixin box-shadow($x, $y, $spread, $inset: false) {
+	@if($inset){
+		-webkit-box-shadow: inset $x $y $spread #333333;
+		-moz-box-shadow:    inset $x $y $spread #333333;
+		box-shadow:         inset $x $y $spread #333333;
+	} @else {
+		-webkit-box-shadow: $x $y $spread #333333;
+		-moz-box-shadow:    $x $y $spread #333333;
+		box-shadow:         $x $y $spread #333333;
+	}
+}
+
+@mixin skewX($skew) {
+	-webkit-transform:  skewX($skew);
+	-moz-transform:     skewX($skew);
+	-o-transform:       skewX($skew);
+	-ms-transform:      skewX($skew);
+	transform:          skewX($skew);
+}
+
+h1, p {
+	margin: 0 auto;
+}
+
+body {
+	margin: 0 auto;
+	font-family: "Source Sans Pro", Tahoma, Geneva, sans-serif;
+	background-color: $background;
+
+	@media (max-width: 700px) {
+		background-color: $white;
+	}
+}
+
+header {
+	background-color: $header;
+	height: 100px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 100px;
+	@include box-shadow(0, 1px, 8px);
+
+	h1 {
+		font-weight: 300;
+		color: #FFFFFF;
+		font-size: 40pt;
+		padding: 30px 0 0 10px;
+	}
+
+	@media (max-width: 700px) {
+		@include box-shadow(0, 0, 0);
+		margin-bottom: 50px;
+	}
+
+	#secondary_header {
+		position: relative;
+		bottom: -5px;
+		left: -100%;
+		z-index: 99;
+		width: 75%;
+		text-align: right;
+		background-color: $sub;
+		-webkit-animation: slide 1.5s forwards;
+   		-moz-animation: none;
+	    animation: slide 1.5s forwards;
+		@include skewX(-30deg);
+		@include box-shadow(1px, 1px, 5px);
+
+		p {
+			@include skewX(30deg);
+			font-size: 20pt;
+			font-style: italic;
+			font-weight: 200;
+			padding: 7px 25px;
+		}
+
+		@media (max-width: 700px) {
+			width: 100%;
+			text-align: center;
+			padding: 1px 0;
+			bottom: -4px;
+			left: 0;
+   			-webkit-animation: none;
+   			-moz-animation: none;
+   			animation: none;
+			@include skewX(0deg);
+			@include box-shadow(0, 0, 0);
+
+			p {
+				@include skewX(0deg);
+			}
+		}
+	}
+}
+
+#main {
+	margin: 0 auto;
+	width: 90%;
+	background-color: $white;
+	overflow: hidden;
+	@include box-shadow(0, 0, 3px);
+
+	@media (max-width: 700px) {
+		width: 100%;
+		@include box-shadow(0, 0, 0);
+	}
+
+	h2 {
+		font-weight: 200;
+	}
+}
+
+%icon-siding {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 100%;
+	display: block;
+	background-color: $icons;
+	z-index: -1;
+
+	@media (max-width: 603px) {
+		width: 100px;
+	}
+}
+#icons {
+	position: relative;
+	width: 65%;
+	background-color: $icons;
+	margin: 0 auto;
+	z-index: 99;
+	text-align: center;
+	@include box-shadow(0, 1px, 5px);
+
+ 	&:before {
+		@extend %icon-siding;
+		@include skewX(30deg);
+		left: -25px;
+
+		@media (max-width: 700px) {
+			display: none;
+		}
+	}
+	&:after {
+		@extend %icon-siding;
+		@include skewX(-30deg);
+		right: -25px;
+		top: 0;
+
+		@media (max-width: 700px) {
+			display: none;
+		}
+	}
+
+	a {
+		border: none;
+		text-decoration: none;
+		opacity: 1;
+		-webkit-transition: opacity 0.5s ease;
+		-moz-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+
+	@media (max-width: 700px) {
+		width: 100%;
+	}
+}
+
+#grid-1, #grid-2 {
+	padding: 30px;
+	width: 50%;
+	margin: -1px;
+	float: left;
+	box-sizing: border-box;
+	display: block;
+	opacity: 0;
+	-webkit-animation: fadeIn 2s forwards;
+	-moz-animation: fadeIn 2s forwards;
+	animation: fadeIn 2s forwards;
+
+	@media (max-width: 700px) {
+		width: 100%;
+		float: none;
+		padding: 0 30px;
+	}
+}
+@-webkit-keyframes slide {
+    100% { left: -25px; }
+}
+@-moz-keyframes slide {
+    100% { left: -25px; }
+}
+@keyframes slide {
+    100% { left: -25px; }
+}
+
+@-webkit-keyframes fadeIn {
+    100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    100% { opacity: 1; }
+}
+@keyframes fadeIn {
+    100% { opacity: 1; }
+}
+
+
+svg {
+	width: 65px;
+	height: 65px;
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+
+	&:hover {
+		color: invert($link);
+	}
+}
+
+ul#projects {
+	li {
+		padding-bottom: 15px;
+	}
+	p {
+		text-indent: 20px;
+	}
+}

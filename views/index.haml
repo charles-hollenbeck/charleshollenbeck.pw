@@ -1,41 +1,71 @@
 !!! 5
 %html
-  %head
-    %title Charles Hollenbeck | Web Profile
-    %meta(charset="UTF-8")
-    %meta(name="description" content="The web portfolio of Charles Hollenbeck.")
-    %meta(meta name="keywords" content="Charles,Charles Hollenbeck,Hollenbeck")
-    %meta(meta name="author" content="Charles Hollenbeck")
-    %link(rel="icon" href="images/ruby.png" type="image/x-icon")
-    %link(rel="stylesheet" href="css/style.css")
-  %body
-    #wrapper
-      %nav
-        %ul
-          - menu.each do |btn|
-            %li
-              %a(href="#{btn[:link]}")
-                %img(src="images/#{btn[:image]}")
-      #inner
-        #avatar
-          %img(src="images/avatar.png")
-        #container
-          %header
-            %h1
-              Charles Hollenbeck -
-              %span.subtitle Web Developer
-          #content
-            %h1
-              %em A curious techie working his way through life while learning new skills.
-      #bio-container
-        #rupee
-          %img(src="images/ruby.png")
-        #biowrap
-          #bio
-            %ul#skills
-              - skills.each do |badge|
-                - if badge[:color]
-                  %li.button(style="background-color:#{badge[:color]}") #{badge[:skill]}
-                - else
-                  %li.button "#{badge[:skill]}"
+	%head
+		%title Charles Hollenbeck | Web Designer
+		%link(rel="stylesheet" href="/scss/style.css")
 
+		/[if lt IE 9]
+			%script(src="js/html5shiv.min.js" type="text/javscript")
+	%body
+		%header
+			%h1 Charles Hollenbeck
+			#secondary_header
+				%p Web Designer and Developer
+		#main
+			#icons
+				%a(href="https://play.google.com/store/apps/developer?id=Charles%20Hollenbeck")
+					= haml :"icons/appbar.os.android", :locals => {:color => "#bdc3c7"}
+				%a(href="https://github.com/charles-hollenbeck")
+					= haml :"icons/appbar.social.github.octocat.solid", :locals => {:color => "#bdc3c7"}
+				%a(href="http://www.linkedin.com/pub/charles-hollenbeck/7a/163/49a")
+					= haml :"icons/appbar.social.linkedin.variant", :locals => {:color => "#bdc3c7"}
+				%a(href="http://stackoverflow.com/users/1168379/charles")
+					= haml :"icons/appbar.social.stackoverflow", :locals => {:color => "#bdc3c7"}
+				%a(href="https://keybase.io/sh")
+					= haml :"icons/appbar.key", :locals => {:color => "#bdc3c7"}
+				%a(href="https://keybase.io/sh")
+					= haml :"icons/appbar.book.list", :locals => {:color => "#bdc3c7"}
+			#grid-1
+				%h2 About
+				%p
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				%h2 Skills
+				%ul
+					%li Ruby
+					%li Java
+					%li PHP
+					%li HTML 5 (Haml)
+					%li CSS 3 (Sass)
+					%li Javascript
+					%li Responsive Design
+					%li MongoDB
+					%li MySQL
+					%li Linux
+					%li Computer Repair
+					%li Photoshop
+			#grid-2
+				%h2 Projects
+				%ul#projects
+					%li
+						%a(href="https://github.com/XD6Code/tincan-gem") TinCan Storage API Gem
+						%p	Ruby gem for the TinCan Storage API
+					%li
+						%a(href="https://github.com/charles-hollenbeck/Haml-Modern-UI-Icons") Haml Modern UI Icons
+						%p
+							Haml partials/files for every SVG of the icons from&nbsp;
+							%a(href="http://modernuiicons.com" target="_blank") modernuiicons.com
+					%li
+						%a(href="https://github.com/XD6Code/ChromeLife") ChromeLife
+						%p Uses your secondlife.com credentials to display useful at-a-glance information about your Second Life account
+					%li
+						%a(href="https://github.com/charles-hollenbeck/minimalistic-coding-jekyll-theme") Minimalistic Coding - Jekyll Theme
+						%p A Minimalistic theme for sharing programming tactics and ideas
+					%li
+						%a(href="https://github.com/charles-hollenbeck/pastebin-click") Pastebin-Click
+						%p Utlizies nautilus-actions (on linux) to share files to pastebin
+		%footer
